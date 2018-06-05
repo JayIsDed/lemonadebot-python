@@ -33,6 +33,12 @@ async def on_message(message):
 
     if message.content.upper() == "PATRICIA":
         await bot.send_message(message.channel, "Boiling hotdogs the travis g money way since 2017.")
+
+    if message.content.upper() == "JOE":
+        await bot.send_message(message.channel, "Is taken by Gigi")
+
+    if message.content.upper() == "GIGI":
+        await bot.send_message(message.channel, "Is taken by Joe")
 #ping command
     if message.content.upper().startswith('!PING'):
         await bot.send_message(message.channel, "Pong")
@@ -98,6 +104,18 @@ async def on_message(message):
         emb1.add_field(name='!gay [user1]', value='Use this command to calculate gayness', inline=False)
         emb1.add_field(name='!8ball [question]', value='This is the 8Ball command, ask it questions', inline=False)
         await bot.send_message(message.channel, embed=emb1)
+#Trigger command
+    if message.content.upper().startswith('!TRIGGER'):
+        emb1 = discord.Embed(title='Help', Description='commands', colour=0x00ff00)
+        emb1.add_field(name='Alex', value='Is an Octa-Cosa **Bitch**')
+        emb1.add_field(name='Jason', value='Is Paddle Daddy')
+        emb1.add_field(name='Sky', value='Kicked someone in the balls')
+        emb1.add_field(name='Kevin', value='Is the pokemon Sugar Daddy')
+        emb1.add_field(name='Paddle', value='You have been McPaddled by Paddle Daddy')
+        emb1.add_field(name='Patricia', value= 'Boiling hotdogs the travis g money way since 2017')
+        emb1.add_field(name='Joe', value='Taken by Gigi')
+        emb1.add_field(name='Gigi', value='Taken by Joe')
 
+        await bot.send_message(message.channel, embed=emb1)
 
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
