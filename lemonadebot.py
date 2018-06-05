@@ -60,7 +60,10 @@ async def on_message(message):
         if ran1 == 12:
             await bot.send_message(message.channel, "Yis")
 #ship command 
-
+    if message.content.upper().startswith('!SHIP'):
+        ran2 = random.randint(0,100)
+        emb1 = discord.Embed(title='Ship', description='I ship you two'+ran2+'%', colour=0x00ff00)
+        await bot.send_message(message.channel, embed=emb1)
 
 
 
