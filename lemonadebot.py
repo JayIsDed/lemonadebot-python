@@ -15,6 +15,7 @@ async def on_ready():
 #event triggers for any keywords
 @bot.event
 async def on_message(message):
+#trigger commands
     if message.content.upper() == "ALEX":
         await bot.send_message(message.channel, "Is an Octa-Cosa **Bitch**")
 
@@ -29,6 +30,9 @@ async def on_message(message):
 
     if message.content.upper() == "PADDLE":
         await bot.send_message(message.channel, "You have been McPaddled By Paddle Daddy")
+
+    if message.content.upper() == "PATRICIA":
+        await bot.send_message(message.channel, "Boiling hotdogs the travis g money way since 2017.")
 #ping command
     if message.content.upper().startswith('!PING'):
         await bot.send_message(message.channel, "Pong")
@@ -76,7 +80,24 @@ async def on_message(message):
         ran2 = random.randint(0,100)
         emb1 = discord.Embed(title='Ship', description='I ship you two '+str(ran2)+'%', colour=0x00ff00)
         await bot.send_message(message.channel, embed=emb1)
-
+#Gay command
+    if message.content.upper().startswith('!GAY'):
+        ran3 = random.randint(0,100)
+        emb1 = discord.Embed(title='Gay Meter', description='The Gay Meter says '+str(ran3)+'%', colour=0x800080)
+        await bot.send_message(message.channel, embed=emb1)
+#Hate command    
+    if message.content.upper().startswith('!HATE'):
+        ran4 = random.randint(0,100)
+        emb1 = discord.Embed(title='Hatred', description='Id have to say the pure hatred between these two fuckers is about.. '+str(ran4)+'%')
+        await bot.send_message(message.channel, embed=emb1)
+#Help command
+    if message.content.upper().startswith('!HELP'):
+        emb1 = discord.Embed(title='Help', Description='commands', colour=0x00ff00)
+        emb1.add_field(name='!ship [user1] [user2]', value='Use this command to fucking ship people', inline=False)
+        emb1.add_field(name='!hate [user1] [user2]', value='Use this command to calculate pure Hate', inline=False)
+        emb1.add_field(name='!gay [user1]', value='Use this command to calculate gayness', inline=False)
+        emb1.add_field(name='!8ball [question]', value='This is the 8Ball command, ask it questions', inline=False)
+        await bot.send_message(message.channel, embed=emb1)
 
 
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
