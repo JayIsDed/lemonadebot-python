@@ -62,7 +62,7 @@ async def on_message(message):
 #ship command 
     if message.content.upper().startswith('!SHIP'):
         ran2 = random.randint(0,100)
-        emb1 = discord.Embed(title='Ship', description='I ship you two'+str(ran2)+'%', colour=0x00ff00)
+        emb1 = discord.Embed(title='Ship', description='I ship you two '+str(ran2)+'%', colour=0x00ff00)
         await bot.send_message(message.channel, embed=emb1)
 
 
