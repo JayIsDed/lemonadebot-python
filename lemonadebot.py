@@ -36,29 +36,41 @@ async def on_message(message):
     if message.content.upper().startswith('!8BALL'):
         ran1 = random.randint(1,13)
         if ran1 == 1:
-            await bot.send_message(message.channel, "Fuck you, No.")
+            emb1 = discord.Embed(title='8Ball', description='Fuck you, No', colour=0xff0000)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 2:
-            await bot.send_message(message.channel, "Get rEKT, NO.")
+            emb1 = discord.Embed(title='8Ball', description='Get rEKT, NO!', colour=0xff0000)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 3:
-            await bot.send_message(message.channel, "Hm.. That's a solid fucking no from me.")
+            emb1 = discord.Embed(title='8Ball', description='Hm.. Thats a solid fucking no from me.', colour=0xff0000)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 4:
-            await bot.send_message(message.channel, "Indeedidly nOPE.")
+            emb1 = discord.Embed(title='8Ball', description='"Indeedidly nOPE.', colour=0xff0000)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 5:
-            await bot.send_message(message.channel, "Why are you asking me these questions, I have no clue.")
+            emb1 = discord.Embed(title='8Ball', description='Why are you asking me these questions, I have no clue.', colour=0x0000ff)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 6:
-            await bot.send_message(message.channel, "Im not a fucking psychic, Ask someone else.")
+            emb1 = discord.Embed(title='8Ball', description='Im not a fucking psychic, Ask someone else.', colour=0x0000ff)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 7:
-            await bot.send_message(message.channel, "Go ask another person and leave me the fuck alone.")
+            emb1 = discord.Embed(title='8Ball', description='Go ask another person and leave me the fuck alone.', colour=0x0000ff)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 8:
-            await bot.send_message(message.channel, "I honestly have no fucking idea.")
+            emb1 = discord.Embed(title='8Ball', description='I honestly have no fucking idea.', colour=0x0000ff)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 9:
-            await bot.send_message(message.channel, "Fuck yes, All the way!")
+            emb1 = discord.Embed(title='8Ball', description='Fuck yes, All the way!', colour=0x00ff00)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 10:
-            await bot.send_message(message.channel, "That's a solid cucking n- I mean yes.")
+            emb1 = discord.Embed(title='8Ball', description='Thats a solid cucking n- I mean yes.', colour=0x00ff00)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 11:
-            await bot.send_message(message.channel, "Hmm.. Yes.. Now can you leave me alone? I'm trying to do nothing.")
+            emb1 = discord.Embed(title='8Ball', description='Hmm.. Yes.. Now can you leave me alone? Im trying to do nothing.', colour=0x00ff00)
+            await bot.send_message(message.channel, embed=emb1)
         if ran1 == 12:
-            await bot.send_message(message.channel, "Yis")
+            emb1 = discord.Embed(title='8Ball', description='Yis', colour=0x00ff00)
+            await bot.send_message(message.channel, embed=emb1)
 #ship command 
     if message.content.upper().startswith('!SHIP'):
         ran2 = random.randint(0,100)
