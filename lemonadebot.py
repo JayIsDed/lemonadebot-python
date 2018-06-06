@@ -128,4 +128,10 @@ async def on_message(message):
         emb1 = discord.Embed(colour=0x00ff00)
         emb1.add_field(name='9Ball', value=resp[ran5])
         await bot.send_message(message.channel, embed=emb1)
+    if message.content.upper().startswith('!CoinFlip')
+        ran6 = random.randint(1,3)
+        coin = ["It's McHeads!", "It's McTails", "It's neither cause Fuck you"]
+        emb1 = discord.Embed(colour=0x00ff00)
+        emb1.add_field(name='CoinFLip', value=coin[ran6])
+        await bot.send_message(message.channel, embed=emb1)
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
