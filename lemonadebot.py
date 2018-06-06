@@ -48,6 +48,9 @@ async def on_message(message):
     
     if message.content.upper() == "TUESDAY":
         await bot.send_message(message.channel, "https://cdn.discordapp.com/attachments/421408617166667796/453976654423785512/unknown.png")
+
+    if message.content.upper() == "BOI":
+        await bot.send_message(message.channel, "https://cdn.discordapp.com/attachments/426770908619735041/453979448434360332/flat800x800075f.u5.jpg")
 #ping command
     if message.content.upper().startswith('!PING'):
         await bot.send_message(message.channel, "Pong")
