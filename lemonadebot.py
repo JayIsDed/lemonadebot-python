@@ -136,5 +136,8 @@ async def on_message(message):
 #Dev option
     if message.content.upper().startswith('!GAME'):
         args = message.content.split(' ')
+        emb1 = discord.Embed(colour=0x800080)
         await bot.change_presence(game=discord.Game(name="%s" % (" ".join(args[1:]))))
+        emb1.add_field(name='Indeedidly', value='I am now playing %s' % (" ".join(args[1:])))
+        await bot.send_message(message.channel, embed=emb1)
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
