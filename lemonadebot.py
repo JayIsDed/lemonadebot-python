@@ -58,7 +58,7 @@ async def on_message(message):
             emb1 = discord.Embed(title='8Ball', description='Hm.. Thats a solid fucking no from me.', colour=0xff0000)
             await bot.send_message(message.channel, embed=emb1)
         if ran1 == 4:
-            emb1 = discord.Embed(title='8Ball', description='"Indeedidly nOPE.', colour=0xff0000)
+            emb1 = discord.Embed(title='8Ball', description='Indeedidly nOPE.', colour=0xff0000)
             await bot.send_message(message.channel, embed=emb1)
         if ran1 == 5:
             emb1 = discord.Embed(title='8Ball', description='Why are you asking me these questions, I have no clue.', colour=0x0000ff)
@@ -140,4 +140,11 @@ async def on_message(message):
         await bot.change_presence(game=discord.Game(name="%s" % (" ".join(args[1:]))))
         emb1.add_field(name='Indeedidly', value='I am now playing %s' % (" ".join(args[1:])))
         await bot.send_message(message.channel, embed=emb1)
+#choose command
+    if message.content.upper().startswith('!CHOOSE'):
+        args = message.content.split(' ;')
+        emb1 = discord.Embed(colour=0x00ff00)
+        ran6 = random.randint(1, (len(args) - 1))
+        emb1.add_field(name='I choose', value='%s' % (" ".join(args[ran6]))
+        await bot.send_message(message.channel, embed=emb1)            
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
