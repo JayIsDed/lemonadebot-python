@@ -121,6 +121,7 @@ async def on_message(message):
         emb1.add_field(name='Gigi', value='Taken by Joe', inline=False)
         emb1.add_field(name='Jacob', value='Is Jewish', inline=False)
         await bot.send_message(message.channel, embed=emb1)
+#A test for array usage for 8ball
     if message.content.upper().startswith('!9BALL'):
         ran5 = random.randint(1,12)
         resp = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9", "test10", "test11", "test12"]
