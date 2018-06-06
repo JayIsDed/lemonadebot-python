@@ -10,8 +10,7 @@ bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
-    print ("Bot is ready!")
-    await bot.change_presence(game=discord.Game(name="with your emotions")) 
+    print ("Bot is ready!") 
 #event triggers for any keywords
 @bot.event
 async def on_message(message):
@@ -134,4 +133,8 @@ async def on_message(message):
         emb1 = discord.Embed(colour=0x00ff00)
         emb1.add_field(name='CoinFLip', value=coin[ran6])
         await bot.send_message(message.channel, embed=emb1)
+#Dev option
+    if message.content.upper().startswith('!GAME'):
+        args = message.content.split(' ')
+        await bot.change_presence(game=discord.Game(name="%s" % (" ".join(args[1:]))))
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
