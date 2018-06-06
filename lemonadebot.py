@@ -107,7 +107,7 @@ async def on_message(message):
         emb1.add_field(name='!hate [user1] [user2]', value='Use this command to calculate pure Hate', inline=False)
         emb1.add_field(name='!gay [user1]', value='Use this command to calculate gayness', inline=False)
         emb1.add_field(name='!8ball [question]', value='This is the 8Ball command, ask it questions', inline=False)
-        await bot.send_message(message.channel, embed=emb1)
+        await bot.send_message(message.author, embed=emb1)
 #Trigger command
     if message.content.upper().startswith('!TRIGGER'):
         emb1 = discord.Embed(title='Triggers', colour=0x00ff00)
