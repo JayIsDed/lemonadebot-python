@@ -17,7 +17,8 @@ async def on_ready():
 async def on_message(message):
 #trigger commands
     if message.content.upper() == "ALEX":
-        await bot.send_message(message.channel, "Is an Octa-Cosa **Bitch**")
+        emb1 = discord.Embed(title='Alex Can not FUCKING boil hotDOGS', colour=0xF37373)
+        await bot.send_message(message.channel, embed=emb1)
 
     if message.content.upper() == "SKY":
         await bot.send_message(message.channel, "Kicked someone in the balls")
@@ -39,6 +40,9 @@ async def on_message(message):
 
     if message.content.upper() == "GIGI":
         await bot.send_message(message.channel, "Is taken by Joe")
+
+    if message.content.upper() == "JACOB":
+        await bot.send_message(message.channel, "Is Jewish")
 #ping command
     if message.content.upper().startswith('!PING'):
         await bot.send_message(message.channel, "Pong")
@@ -106,16 +110,22 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=emb1)
 #Trigger command
     if message.content.upper().startswith('!TRIGGER'):
-        emb1 = discord.Embed(title='Help', Description='commands', colour=0x00ff00)
-        emb1.add_field(name='Alex', value='Is an Octa-Cosa **Bitch**')
-        emb1.add_field(name='Jason', value='Is Paddle Daddy')
-        emb1.add_field(name='Sky', value='Kicked someone in the balls')
-        emb1.add_field(name='Kevin', value='Is the pokemon Sugar Daddy')
-        emb1.add_field(name='Paddle', value='You have been McPaddled by Paddle Daddy')
-        emb1.add_field(name='Patricia', value= 'Boiling hotdogs the travis g money way since 2017')
-        emb1.add_field(name='Joe', value='Taken by Gigi')
-        emb1.add_field(name='Gigi', value='Taken by Joe')
-
+        bot.start_private_message()
+        emb1 = discord.Embed(title='Triggers', colour=0x00ff00)
+        emb1.add_field(name='Alex', value='Is an Octa-Cosa **Bitch**', inline=False)
+        emb1.add_field(name='Jason', value='Is Paddle Daddy', inline=False)
+        emb1.add_field(name='Sky', value='Kicked someone in the balls', inline=False)
+        emb1.add_field(name='Kevin', value='Is the pokemon Sugar Daddy', inline=False)
+        emb1.add_field(name='Paddle', value='You have been McPaddled by Paddle Daddy', inline=False)
+        emb1.add_field(name='Patricia', value= 'Boiling hotdogs the travis g money way since 2017', inline=False)
+        emb1.add_field(name='Joe', value='Taken by Gigi', inline=False)
+        emb1.add_field(name='Gigi', value='Taken by Joe', inline=False)
+        emb1.add_field(name='Jacob', value='Is Jewish', inline=False)
         await bot.send_message(message.channel, embed=emb1)
-
+    if message.content.upper().startswith('!9BALL'):
+        ran5 = random.randint(1,12)
+        resp = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9", "test10", "test11", "test12"]
+        emb1 = discord.Embed(colour=0x00ff00)
+        emb1.add_field(name='9Ball', value=resp[ran5])
+        await bot.send_message(message.channel, embed=emb1)
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
