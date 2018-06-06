@@ -145,6 +145,7 @@ async def on_message(message):
         args = message.content.split(' ;')
         emb1 = discord.Embed(colour=0x00ff00)
         ran6 = random.randint(1, (len(args) - 1))
-        emb1.add_field(name='I choose', value='%s' % (" ".join(args[ran6]))
-        await bot.send_message(message.channel, embed=emb1)            
+        emb1.add_field(name='I choose', value='%s' % (" ".join(args[ran6])))
+        await bot.send_message(message.channel, embed=emb1)
+                       
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
