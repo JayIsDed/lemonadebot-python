@@ -110,7 +110,6 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=emb1)
 #Trigger command
     if message.content.upper().startswith('!TRIGGER'):
-        bot.start_private_message()
         emb1 = discord.Embed(title='Triggers', colour=0x00ff00)
         emb1.add_field(name='Alex', value='Is an Octa-Cosa **Bitch**', inline=False)
         emb1.add_field(name='Jason', value='Is Paddle Daddy', inline=False)
