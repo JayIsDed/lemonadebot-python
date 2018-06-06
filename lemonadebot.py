@@ -42,6 +42,10 @@ async def on_message(message):
 
     if message.content.upper() == "JACOB":
         await bot.send_message(message.channel, "Is Jewish")
+        
+    if message.content.upper() == "BIRD":
+        await bot.send_message(message.channel, "https://cdn.discordapp.com/attachments/426770908619735041/453974938961838104/401127315846725633.gif")
+        
 #ping command
     if message.content.upper().startswith('!PING'):
         await bot.send_message(message.channel, "Pong")
