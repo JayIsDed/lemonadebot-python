@@ -28,7 +28,9 @@ async def on_message(message):
         await bot.send_message(message.channel, "Is Paddle Daddy")
 
     if message.content.upper() == "KEVIN":
-        await bot.send_message(message.channel, "Is the pokemon sugar Daddy")
+        emb1 = discord.Embed(title='NSFW', colour=0x00ff00)
+        emb.add_field(name='NSFW', description='https://www.pornhub.com')
+        await bot.send_message(message.channel, embed.emb1)
 
     if message.content.upper() == "PADDLE":
         await bot.send_message(message.channel, "You have been McPaddled By Paddle Daddy")
