@@ -7,6 +7,7 @@ import requests
 import asyncio
 import random
 import cat
+import rule34
 bot = commands.Bot(command_prefix='!')
 
 @bot.event
@@ -168,6 +169,13 @@ async def on_message(message):
         emb1 = discord.Embed(colour=0x00ff00)
         req = requests.get('http://thecatapi.com/api/images/get?format=src&type=gif')
         emb1.set_image(url="%s" % req.url)
-        await bot.send_message(message.channel, embed=emb1)        
+        await bot.send_message(message.channel, embed=emb1)
+#nsfw command
+    if message.content.upper().startswith('!NSFW'):
+        args = message.content.split(' ')
+        emb1 = discord.Embed(colour=0x00ff00)
+        emb1.set_image(url="%s" % rule34.urlGen(tags="%s" % ("".join(args[1])), limit=1))
+        await bot.send_message(message.channel, embed=emb1)
+        
                        
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
