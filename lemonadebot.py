@@ -5,7 +5,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
 import random
-
+import cat
 bot = commands.Bot(command_prefix='!')
 
 @bot.event
@@ -162,5 +162,9 @@ async def on_message(message):
         ran6 = random.randint(1, (len(args) - 1))
         emb1.add_field(name='I choose', value='%s' % (" ".join(args[ran6])))
         await bot.send_message(message.channel, embed=emb1)
+#cat command
+    if message.content.upper().startswith('!CAT'):
+        emb1 = discord.Embed(colour=0x00ff00)
+        emb1.set_image(url="%s" % cat.getcat())
                        
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
