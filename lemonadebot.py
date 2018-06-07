@@ -44,13 +44,19 @@ async def on_message(message):
         await bot.send_message(message.channel, "Is Jewish")
         
     if message.content.upper() == "BIRD":
-        await bot.send_message(message.channel, "https://cdn.discordapp.com/attachments/426770908619735041/453974938961838104/401127315846725633.gif")
+        emb1 = discord.Embed(colour=0x00ff00)
+        emb1.add_field(name='Birb', value='https://cdn.discordapp.com/attachments/426770908619735041/453974938961838104/401127315846725633.gif')
+        await bot.send_message(message.channel, embed=emb1)
     
     if message.content.upper() == "TUESDAY":
-        await bot.send_message(message.channel, "https://cdn.discordapp.com/attachments/421408617166667796/453976654423785512/unknown.png")
+        emb1 = discord.Embed(colour=0x00ff00)
+        emb1.add_field(name='Tuesday', value='https://cdn.discordapp.com/attachments/421408617166667796/453976654423785512/unknown.png')
+        await bot.send_message(message.channel, embed=emb1)
 
     if message.content.upper() == "BOI":
-        await bot.send_message(message.channel, "https://cdn.discordapp.com/attachments/426770908619735041/453979448434360332/flat800x800075f.u5.jpg")
+        emb1 = discord.Embed(colour=0x00ff00)
+        emb1.add_field(name='Boi', value='https://cdn.discordapp.com/attachments/426770908619735041/453979448434360332/flat800x800075f.u5.jpg')
+        await bot.send_message(message.channel, embed=emb1)
 #ping command
     if message.content.upper().startswith('!PING'):
         await bot.send_message(message.channel, "Pong")
