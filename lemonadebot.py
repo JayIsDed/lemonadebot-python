@@ -171,10 +171,10 @@ async def on_message(message):
         emb1.set_image(url="%s" % req.url)
         await bot.send_message(message.channel, embed=emb1)
 #nsfw command
-    if message.content.upper().startswith('!NSFW'):
-        args = message.content.split(' ')
+    if message.content.upper().startswith('!REDDITNSFW'):
         emb1 = discord.Embed(colour=0x00ff00)
-        emb1.set_image(url="%s" % rule34.urlGen(tags="%s" % ("".join(args[1])), limit=1))
+        req = requests.get('https://www.reddit.com/r/randnsfw')
+        emb1.set_image(url="%s" % req.url)
         await bot.send_message(message.channel, embed=emb1)
         
                        
