@@ -174,7 +174,7 @@ async def on_message(message):
     if message.content.upper().startswith('!REDDITNSFW'):
         emb1 = discord.Embed(colour=0x00ff00)
         req = requests.get('https://www.reddit.com/r/randnsfw')
-        emb1.set_image(url="%s" % req.url)
+        emb1.add_field(name='NSFW', value='%s' % req.url)
         await bot.send_message(message.channel, embed=emb1)
         
                        
