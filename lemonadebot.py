@@ -165,6 +165,7 @@ async def on_message(message):
 #cat command
     if message.content.upper().startswith('!CAT'):
         emb1 = discord.Embed(colour=0x00ff00)
-        emb1.set_image(url="%s" % cat.getCat())
+        emb1.set_image(url="http://thecatapi.com/api/images/get?format=src&type=gif")
+        await bot.send_message(message.channel, embed=emb1)        
                        
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
