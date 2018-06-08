@@ -183,6 +183,16 @@ async def on_message(message):
         req = requests.get('https://www.reddit.com/r/randnsfw')
         emb1.add_field(name='NSFW', value='%s' % req.url)
         await bot.send_message(message.channel, embed=emb1)
+#random number
+    if message.content.upper().startswith('!RANDOM'):
+        emb1 = disocrd.Embed(colour=0x00ff00)
+        args = message.content.split(" ")
+        a = int(args[1])
+        b = int(args[2])
+        ran7 = random.randint(a, b)
+        emb1.add_field(name='Number', value='%s' % ran7 )
+        await bot.send_message(message.channel, embed=emb1)
+        
         
                        
 bot.run("NDUzMzk0NTM4MjA4NDI4MDQz.DfeQGQ.utRGRTjtFxqaLWCqMZSuj7gzpqE")
