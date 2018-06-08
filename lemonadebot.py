@@ -68,8 +68,7 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=emb1)
         
     if message.content.upper() == "F":
-        emb1 = discord.Embed(colour=0xff0000)
-        emb1.add_field(name='Repsect Given')
+        emb1 = discord.Embed(title='Respect Given', colour=0xff0000)
         await bot.send_message(message.channel, embed=emb1)
 #ping command
     if message.content.upper().startswith('!PING'):
