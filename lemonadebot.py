@@ -61,6 +61,11 @@ async def on_message(message):
         emb1 = discord.Embed(colour=0x00ff00)
         emb1.set_image(url="https://cdn.discordapp.com/attachments/426770908619735041/453979448434360332/flat800x800075f.u5.jpg")
         await bot.send_message(message.channel, embed=emb1)
+        
+    if message.content.upper() == "RIP":
+        emb1 = discord.Embed(colour=0x00ff00)
+        emb1.set_image(url="https://cdn.discordapp.com/attachments/448096771273523212/454653361208164364/image.jpg")
+        await bot.send_message(message.channel, embed=emb1)
 #ping command
     if message.content.upper().startswith('!PING'):
         await bot.send_message(message.channel, "Pong")
