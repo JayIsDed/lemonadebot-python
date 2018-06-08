@@ -185,7 +185,7 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=emb1)
 #random number
     if message.content.upper().startswith('!RANDOM'):
-        emb1 = disocrd.Embed(colour=0x00ff00)
+        emb1 = discord.Embed(colour=0x00ff00)
         args = message.content.split(" ")
         a = int(args[1])
         b = int(args[2])
